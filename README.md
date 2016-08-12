@@ -3,6 +3,7 @@
 I created this repo for the purposes of following along with Dan Abromov's egghead tutorials seen here:
 
 [Getting Started with Redux](https://egghead.io/courses/getting-started-with-redux)
+
 [Building React Applications with Idiomatic Redux](https://egghead.io/courses/building-react-applications-with-idiomatic-redux)
 
 If you follow along with these courses you may need to install aditional dependencies:
