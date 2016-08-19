@@ -3,7 +3,9 @@ import { combineReducers } from 'redux';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import StepLessonContainer from './containers/StepLessonContainer'
+// debugger;
 ReactDOM.render(
-  <p>"Hello, World!"</p>,
+  <StepLessonContainer />,
   document.getElementById('app')
 )
