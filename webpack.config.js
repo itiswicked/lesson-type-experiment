@@ -5,7 +5,7 @@ module.exports = {
     path: './src/main.js'
   },
   output: {
-    path: './build',
+    path: './app/assets/javascripts',
     filename: 'bundle.js'
   },
   module: {
@@ -17,17 +17,16 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel'
+        loader: 'babel',
+        query: {
+          presets: [
+            'babel-preset-es2015',
+            'babel-preset-react',
+            'babel-preset-stage-0'
+          ].map(require.resolve)
+        }
       }
     ]
   },
-  plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ],
-  devtool: 'eval-source-map',
-  devServer: {
-    contentBase: './build',
-    inline: true,
-    hot: true
-  }
+  devtool: 'eval-source-map'
 }

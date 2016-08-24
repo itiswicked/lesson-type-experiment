@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title></title>
-  </head>
-  <body>
-    <div hidden id="markdown">
-      A core aspect of object-oriented programming is determining what constitutes an object, and the circumstances that warrant splitting a concept into multiple objects.
+## Object Stuff
+
+A core aspect of object-oriented programming is determining what constitutes an object, and the circumstances that warrant splitting a concept into multiple objects.
 
 ### Learning Goals
 
@@ -43,15 +37,15 @@ Continuing with our boat theme, let's consider an object: `Sailboats`. As you ma
 
 ```ruby
 class Sailboat
-  attr_reader :mainsail_type, :mainsail_size, :jib_type, :jib_size, :length
+attr_reader :mainsail_type, :mainsail_size, :jib_type, :jib_size, :length
 
-  def initialize(mainsail_type, mainsail_size, jib_type, jib_size, length)
-    @mainsail_type = mainsail_type
-    @mainsail_size = mainsail_size
-    @jib_type = jib_type
-    @jib_size = jib_size
-    @length = length
-  end
+def initialize(mainsail_type, mainsail_size, jib_type, jib_size, length)
+@mainsail_type = mainsail_type
+@mainsail_size = mainsail_size
+@jib_type = jib_type
+@jib_size = jib_size
+@length = length
+end
 end
 ```
 
@@ -59,17 +53,17 @@ In this case, however, the `Sailboat` class is taking responsibility for not jus
 
 ```ruby
 class Sailboat
-  attr_reader :mainsail_type, :mainsail_size, :mainsail_color, :jib_type, :jib_size, :jib_color, :length
+attr_reader :mainsail_type, :mainsail_size, :mainsail_color, :jib_type, :jib_size, :jib_color, :length
 
-  def initialize(mainsail_type, mainsail_size, mainsail_color, jib_type, jib_size, jib_color, length)
-    @mainsail_type = mainsail_type
-    @mainsail_size = mainsail_size
-    @mainsail_color = mainsail_color
-    @jib_type = jib_type
-    @jib_size = jib_size
-    @jib_color = jib_color
-    @length = length
-  end
+def initialize(mainsail_type, mainsail_size, mainsail_color, jib_type, jib_size, jib_color, length)
+@mainsail_type = mainsail_type
+@mainsail_size = mainsail_size
+@mainsail_color = mainsail_color
+@jib_type = jib_type
+@jib_size = jib_size
+@jib_color = jib_color
+@length = length
+end
 end
 ```
 
@@ -92,26 +86,26 @@ Given that the `Sail` has quite a distinct purpose from the `Sailboat`, it reall
 
 ```ruby
 class Sail
-  attr_reader :type, :size, :color
+attr_reader :type, :size, :color
 
-  def initialize(type, size, color)
-    @type = type
-    @size = size
-    @color = color
-  end
+def initialize(type, size, color)
+@type = type
+@size = size
+@color = color
+end
 end
 
 large_sail = Sail.new("canvas", 50, "white")
 small_sail = Sail.new("carbon-fiber", 20, "dark gray")
 
 class Sailboat
-  attr_reader :mainsail, :jib, :length
+attr_reader :mainsail, :jib, :length
 
-  def initialize(mainsail, jib, length)
-    @mainsail = mainsail
-    @jib = jib
-    @length = length
-  end
+def initialize(mainsail, jib, length)
+@mainsail = mainsail
+@jib = jib
+@length = length
+end
 end
 
 ss_drod = Sailboat.new(large_sail, small_sail, 50)
@@ -121,23 +115,23 @@ Now, `Sailboat` only needs to accept a `Sail` object for `mainsail` and `jib`. I
 
 ```ruby
 class Frigate
-  attr_reader :mainsail, :fore_sail, :aft_sail, :cannons
+attr_reader :mainsail, :fore_sail, :aft_sail, :cannons
 
-  def initialize(mainsail, fore_sail, aft_sail, cannons)
-    @mainsail = mainsail
-    @fore_sail = fore_sail
-    @aft_sail = aft_sail
-    @cannons = cannons
-  end
+def initialize(mainsail, fore_sail, aft_sail, cannons)
+@mainsail = mainsail
+@fore_sail = fore_sail
+@aft_sail = aft_sail
+@cannons = cannons
+end
 end
 
 class Trireme
-  attr_reader :sail, :oars
+attr_reader :sail, :oars
 
-  def initialize(sail, oars)
-    @sail = sail
-    @oars = oars
-  end
+def initialize(sail, oars)
+@sail = sail
+@oars = oars
+end
 end
 ```
 
@@ -159,30 +153,30 @@ So far, we've discussed tangible, physical objects. But in Ruby, everything is a
 
 ```ruby
 class Sailboat
-  attr_reader :mainsail, :jib, :length
-  attr_accessor :speed, :direction
+attr_reader :mainsail, :jib, :length
+attr_accessor :speed, :direction
 
-  def initialize(mainsail, jib, length)
-    @mainsail = mainsail
-    @jib = jib
-    @length = length
-    @speed = 0
-    @direction = "NNW"
-  end
+def initialize(mainsail, jib, length)
+@mainsail = mainsail
+@jib = jib
+@length = length
+@speed = 0
+@direction = "NNW"
+end
 
-  def accelerate
-    @speed += 10
-  end
+def accelerate
+@speed += 10
+end
 
-  def stop
-    @speed = 0
-  end
+def stop
+@speed = 0
+end
 
-  def pleasant_trip
-    accelerate
-    # change direction a few times...
-    stop
-  end
+def pleasant_trip
+accelerate
+# change direction a few times...
+stop
+end
 end
 ```
 
@@ -195,38 +189,38 @@ This abstract concept of path can be represented by `Velocity`, which would be r
 
 ```ruby
 class Velocity
-  attr_reader :speed, :direction
+attr_reader :speed, :direction
 
-  def initialize(speed, direction)
-    @speed = speed
-    @direction = direction
-  end
+def initialize(speed, direction)
+@speed = speed
+@direction = direction
+end
 
-  def accelerate
-    @speed += 10
-  end
+def accelerate
+@speed += 10
+end
 
-  def stop
-    @speed = 0
-  end
+def stop
+@speed = 0
+end
 end
 
 class Sailboat
-  attr_reader :mainsail, :jib, :length
-  attr_accessor :velocity
+attr_reader :mainsail, :jib, :length
+attr_accessor :velocity
 
-  def initialize(mainsail, jib, length)
-    @mainsail = mainsail
-    @jib = jib
-    @length = length
-    @velocity = Velocity.new(0, "NNW")
-  end
+def initialize(mainsail, jib, length)
+@mainsail = mainsail
+@jib = jib
+@length = length
+@velocity = Velocity.new(0, "NNW")
+end
 
-  def pleasant_trip
-    @velocity.accelerate
-    # change direction a few times...
-    @velocity.stop
-  end
+def pleasant_trip
+@velocity.accelerate
+# change direction a few times...
+@velocity.stop
+end
 end
 
 ss_drod = Sailboat.new(large_sail, small_sail, 50)
@@ -240,30 +234,25 @@ Furthermore, there are many objects that may have a `Velocity` that have nothing
 
 ```ruby
 class KoalaBear
-  attr_reader :type, :favorite_food
-  attr_accessor :velocity
+attr_reader :type, :favorite_food
+attr_accessor :velocity
 
-  def initialize(type, favorite_food)
-    @type = type
-    @favorite_food = favorite_food
-    @velocity = Velocity.new(0, "SSE")
-  end
+def initialize(type, favorite_food)
+@type = type
+@favorite_food = favorite_food
+@velocity = Velocity.new(0, "SSE")
+end
 
-  def stroll
-    @velocity.accelerate
-    puts "Reaching a top speed of #{@velocity.speed} feet per minute!"
+def stroll
+@velocity.accelerate
+puts "Reaching a top speed of #{@velocity.speed} feet per minute!"
 
-    # other things that koalas do
+# other things that koalas do
 
-    @velocity.stop
-  end
+@velocity.stop
+end
 end
 
 joel = KoalaBear.new("furry","eucalyptus leaves")
 joel.stroll # => Reaching a top speed of 10 feet per minute!
 ```
-    </div>
-    <div id="app"></div>
-    <script src="bundle.js"></script>
-  </body>
-</html>
