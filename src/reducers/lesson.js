@@ -2,7 +2,6 @@ import {
   GET_LESSON_MARKDOWN,
   GET_LESSON_MARKDOWN_SUCCESS
 } from './../actions/lessons'
-debugger;
 
 let initialState = {
   lesson: "",
@@ -22,6 +21,6 @@ const lesson = (state = initialState, action) => {
     default:
       return state;
   }
-}
+};
 
-export { lesson };
+export default lesson;

@@ -23,6 +23,6 @@ const getLesson = () => dispatch => {
 
 export {
   GET_LESSON_MARKDOWN,
-    GET_LESSON_MARKDOWN_SUCCESS,
+  GET_LESSON_MARKDOWN_SUCCESS,
   getLesson
 };

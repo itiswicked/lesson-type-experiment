@@ -4,7 +4,8 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
 import StepLessonContainer from './containers/StepLessonContainer'
-import lesson from './reducers'
+import lesson from './reducers/lesson'
+debugger;
 
 const store = createStore(lesson)
 
