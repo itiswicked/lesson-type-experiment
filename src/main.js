@@ -5,9 +5,8 @@ import { Provider } from 'react-redux';
 
 import StepLessonContainer from './containers/StepLessonContainer'
 import lesson from './reducers/lesson'
-debugger;
 
-const store = createStore(lesson)
+let store = createStore(lesson)
 
 function render() {
   ReactDOM.render(

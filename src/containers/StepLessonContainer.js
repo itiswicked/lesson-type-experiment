@@ -1,28 +1,22 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getLesson } from './../actions/lessons';
 import marked from 'marked';
 
 class StepLessonContainer extends Component {
-  componentWillMount() {
-    this.props.getLesson()
-  }
-
   render() {
-    // let rawMarkdown = document.getElementById('markdown').innerHTML;
-    // let dangerousHTML = { __html: marked(rawMarkdown) }
+    let rawMarkdown = this.props.lesson;
+    let dangerousHTML = { __html: marked(rawMarkdown) }
+    debugger;
     return(
       <div>
-        <p>"HEllo"</p>
+        <p dangerouslySetInnerHTML={dangerousHTML}></p>
       </div>
     )
   };
 };
 
-const mapStateToProps = ({ lesson, isFetching }) => ({
-  lesson,
-  isFetching
+const mapStateToProps = ({ lesson }) => ({
+  lesson
 })
 
-export default connect(mapStateToProps, { getLesson })(StepLessonContainer)
-// <p dangerouslySetInnerHTML={dangerousHTML}></p>
+export default connect(mapStateToProps, null)(StepLessonContainer)
