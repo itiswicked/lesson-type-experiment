@@ -3,15 +3,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
-import StepLessonContainer from './containers/StepLessonContainer'
+import App from './components/App';
 import lesson from './reducers/lesson'
 
-let store = createStore(lesson)
+let store = createStore(
+  lesson,
+  window.devToolsExtension && window.devToolsExtension()
+);
 
 function render() {
   ReactDOM.render(
     <Provider store={store}>
-      <StepLessonContainer />
+      <App />
     </Provider>,
     document.getElementById('app')
   );

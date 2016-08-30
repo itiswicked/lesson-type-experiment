@@ -9,6 +9,8 @@ classroom is a list of students that should be in attendance.
 
 Programmers need lists, too. We just gave them a funny name.
 
+BREAK BREAK BREAK
+
 ## Arrays
 
 An array is just an ordered list. You can add items to the list. You can remove
@@ -20,6 +22,8 @@ order of the items, replace items with specific attributes, \`sort\` them, or
 Let's start calling our lists \`Arrays\`. That way Ruby will understand what we
 are talking about.
 
+BREAK BREAK BREAK
+
 ## Array Basics
 
 You will learn the most in this lesson by typing in the examples provided. Open
@@ -28,6 +32,8 @@ up [\`pry\` session][pry-screencast] and follow along.
 If you don't have pry, you can \`gem install pry\` to get it. It's super awesome.
 
 Or, you can always go with plain, old \`irb\`.
+
+BREAK BREAK BREAK
 
 ### Creating Arrays
 
@@ -55,6 +61,8 @@ pry(main)> to_do = ["walk the dog", "buy milk", "learn about arrays"]
 => ["walk the dog", "buy milk", "learn about arrays"]
 \`\`\`
 
+BREAK BREAK BREAK
+
 ### Array Methods
 
 We can find out some interesting things about our array.
@@ -79,6 +87,7 @@ call on arrays earlier in this article. What other methods of the \`Array\` clas
 might be useful? Pick out a few methods from the list of methods in the \`Array\`
 class and read about them and try them out in \`pry\`.
 
+BREAK BREAK BREAK
 
 ### Accessing Items in Arrays
 
@@ -136,6 +145,8 @@ exactly one cell to the right. To get to the third cell from the first, we need
 to move exactly two cells. This is the basis of pointer arithmetic and finding data in memory. In most every programming language, zero-based arrays
 indices are the norm.
 
+BREAK BREAK BREAK
+
 ## Adding Items
 
 ### The Shovel Operator \`<<\` and \`push\`
@@ -161,6 +172,8 @@ programming.
 pry(main)> to_do.push("do laundry")
 => ["walk the dog", "buy milk", "learn about arrays", "read the news", "do laundry"]
 \`\`\`
+
+BREAK BREAK BREAK
 
 ### Adding Arrays
 
@@ -221,6 +234,8 @@ pry(main)> to_do.index("read the news")
 => 5
 \`\`\`
 
+BREAK BREAK BREAK
+
 ### Reassigning Items in an Array
 
 What if I'm lactose intolerant? Well, we can reassign specific elements in the
@@ -240,6 +255,8 @@ most important of these is the shovel operator \`<<\` and the \`include?\` metho
 You don't have to commit all of these methods to memory. Just know that they
 exist and where you can find them in the <a href="http://ruby-doc.org/core-2.0.0/" target="_blank">Ruby docs</a> if you
 might need one of them in the future.
+
+BREAK BREAK BREAK
 
 ## Removing Items
 
@@ -321,6 +338,8 @@ array. \`unshift\` and \`shift\` are opposites too, except that they operate on 
 front of the array. To use an analogy: \`push\` is to \`pop\`, as \`unshift\` is to
 \`shift\`. Now you're talking like a programmer!
 
+BREAK BREAK BREAK
+
 ### Iterating through Items in an Array
 
 Let's say that I want to print out my \`to_do\` list in a nice format. I can find
@@ -380,6 +399,8 @@ stored in \`item\`, which is \`"learn ruby"\`.
 
 You will use the \`each\` method *a lot* when dealing with arrays. Make sure to
 commit this method to memory.
+
+BREAK BREAK BREAK
 
 ## Outro
 
