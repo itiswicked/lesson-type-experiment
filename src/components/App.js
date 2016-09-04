@@ -3,7 +3,7 @@ import LessonStepList from './../containers/LessonStepList';
 import LessonStep from './../containers/LessonStep';
 
 const App = () => (
-  <div>
+  <div className="app">
     <LessonStepList />
     <LessonStep />
   </div>

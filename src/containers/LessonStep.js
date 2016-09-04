@@ -1,18 +1,27 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import DisplayMarkdown from './../components/DisplayMarkdown';
+import LessonStepHeader from './../components/LessonStepHeader';
 
-const LessonStep = ({ lessonSteps, currentLessonStep }) => {
-  let lessonStep = lessonSteps.filter(step => step.id === currentLessonStep);
-  debugger;
-  return <DisplayMarkdown markdown={lessonStep.body} />;
+const LessonStep = ({ lessonTitle, lessonSteps, currentLessonStepId }) => {
+  let lessonStep = lessonSteps.filter(step => step.id === currentLessonStepId)[0];
+  return (
+    <div className="lesson-step">
+      <LessonStepHeader
+        lessonTitle={lessonTitle}
+        lessonStepTitle={lessonStep.title}
+      />
+      <DisplayMarkdown markdown={lessonStep.body} />
+    </div>
+  );
 }
 
-const mapStateToProps = ({ lessonSteps, currentLessonStep }) => {
+const mapStateToProps = ({ lessonTitle, lessonSteps, currentLessonStepId }) => {
   return {
+    lessonTitle,
     lessonSteps,
-    currentLessonStep
+    currentLessonStepId
   }
 };
-// debugger;
+
 export default connect(mapStateToProps, null)(LessonStep)

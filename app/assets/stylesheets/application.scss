@@ -13,3 +13,32 @@
  *= require_tree .
  *= require_self
  */
+
+@import 'list-item';
+
+.app {
+  border: 1px solid green;
+  display: inline-flex;
+  width: 1075px;
+}
+
+.lesson-step-list {
+  order: 1;
+  height: 100%;
+  flex: 0 0 275px;
+  border: 1px solid red;
+}
+
+.lesson-step {
+  order: 2;
+  flex: 0 0 800px;
+  border: 1px solid blue;
+  height: 100%;
+}
+
+.step-list-ul {
+  list-style-type: none;
+  padding: 0;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}

@@ -22,3 +22,6 @@
 
 # ingore node
 node_modules
+
+#ingore bundle
+app/assets/javascripts/bundle.js

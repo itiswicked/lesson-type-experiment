@@ -1,0 +1,14 @@
+.step-list-item {
+  border: 1px solid black;
+  list-style: none;
+  height: 25px;
+  padding: 10px;
+
+  .check-wrapper {
+    display: inline-block;
+  }
+}
+
+.selected {
+  background-color: grey;
+}

@@ -1,5 +1,11 @@
 const lessonText = `
-## Lists
+Arrays
+
+BREAK BREAK BREAK
+
+Lists
+
+TITLE BREAK
 
 Lists are incredibly useful. You probably have a list of tasks you need to complete
 this week. Before you make a trip to the grocery store, you make a list of
@@ -11,7 +17,9 @@ Programmers need lists, too. We just gave them a funny name.
 
 BREAK BREAK BREAK
 
-## Arrays
+Arrays
+
+TITLE BREAK
 
 An array is just an ordered list. You can add items to the list. You can remove
 items from the list. And, because our lists exist in the magical realm of the
@@ -24,7 +32,9 @@ are talking about.
 
 BREAK BREAK BREAK
 
-## Array Basics
+Array Basics
+
+TITLE BREAK
 
 You will learn the most in this lesson by typing in the examples provided. Open
 up [\`pry\` session][pry-screencast] and follow along.
@@ -35,7 +45,9 @@ Or, you can always go with plain, old \`irb\`.
 
 BREAK BREAK BREAK
 
-### Creating Arrays
+Creating Arrays
+
+TITLE BREAK
 
 \`\`\`no-highlight
 pry(main)> Array.new
@@ -63,7 +75,9 @@ pry(main)> to_do = ["walk the dog", "buy milk", "learn about arrays"]
 
 BREAK BREAK BREAK
 
-### Array Methods
+Array Methods
+
+TITLE BREAK
 
 We can find out some interesting things about our array.
 
@@ -89,7 +103,9 @@ class and read about them and try them out in \`pry\`.
 
 BREAK BREAK BREAK
 
-### Accessing Items in Arrays
+Accessing Items in Arrays
+
+TITLE BREAK
 
 Arrays are a little bit funny about the way we access items. We can access an
 item in the array by providing an \`index\`, which starts at zero. We can ask an
@@ -147,7 +163,9 @@ indices are the norm.
 
 BREAK BREAK BREAK
 
-## Adding Items
+Adding Items
+
+TITLE BREAK
 
 ### The Shovel Operator \`<<\` and \`push\`
 
@@ -175,7 +193,9 @@ pry(main)> to_do.push("do laundry")
 
 BREAK BREAK BREAK
 
-### Adding Arrays
+Adding Arrays
+
+TITLE BREAK
 
 We can combine arrays using the addition symbol:
 
@@ -236,7 +256,9 @@ pry(main)> to_do.index("read the news")
 
 BREAK BREAK BREAK
 
-### Reassigning Items in an Array
+Reassigning Items in an Array
+
+TITLE BREAK
 
 What if I'm lactose intolerant? Well, we can reassign specific elements in the
 array like so:
@@ -258,7 +280,9 @@ might need one of them in the future.
 
 BREAK BREAK BREAK
 
-## Removing Items
+Removing Items
+
+TITLE BREAK
 
 ### The \`shift\` Method
 
@@ -340,7 +364,9 @@ front of the array. To use an analogy: \`push\` is to \`pop\`, as \`unshift\` is
 
 BREAK BREAK BREAK
 
-### Iterating through Items in an Array
+Iterating through Items in an Array
+
+TITLE BREAK
 
 Let's say that I want to print out my \`to_do\` list in a nice format. I can find
 the length of my array with the \`length\` method. Knowing the length of my array,
@@ -402,7 +428,9 @@ commit this method to memory.
 
 BREAK BREAK BREAK
 
-## Outro
+Outro
+
+TITLE BREAK
 
 Here, we mostly dealt with strings as the items in our array, but our array can
 hold most anything. Be it integers, real numbers, \`File\` objects, or even other

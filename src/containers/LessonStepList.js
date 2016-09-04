@@ -7,13 +7,10 @@ import { switchLessonStep, toggleCompleted } from './../actions/lessons';
 const LessonStepList = (props) => {
 
   let stepListItems = props.lessonSteps.map(step => {
-    let title = `Theee Array`;
-    let selected = step.id === props.currentLessonStep;
+    let selected = step.id === props.currentLessonStepId;
     return (
       <LessonStepListItem
-        title={title}
-        checked={step.completed}
-        selected={selected}
+        {...step}
         id={step.id}
         key={step.id}
         onClick={props.switchLessonStep}
@@ -22,16 +19,18 @@ const LessonStepList = (props) => {
     );
   });
 
-  return(
-    <ul>
-      {stepListItems}
-    </ul>
+  return (
+    <div className="lesson-step-list">
+      <ul className="step-list-ul">
+        {stepListItems}
+      </ul>
+    </div>
   )
 };
 
-const mapStateToProps = ({ lessonSteps, currentLessonStep }) => ({
+const mapStateToProps = ({ lessonSteps, currentLessonStepId }) => ({
   lessonSteps,
-  currentLessonStep
+  currentLessonStepId
 })
 
 const mapDispatchToProps = dispatch => {

@@ -7,22 +7,39 @@ import {
   toggleCompleted
 } from './../actions/lessons';
 
-let lessonSteps = lessonText.split("BREAK BREAK BREAK").map((stepText, index) => ({
+function parseStepText(text) {
+  let splitText = text.split('TITLE BREAK');
+  return {
+    title: splitText[0].trim(),
+    body: splitText[1].trim()
+  };
+}
+
+let lessonStepArray = lessonText.split("BREAK BREAK BREAK");
+
+let lessonSteps = lessonStepArray.slice(1).map((stepText, index) => {
+  let parsedStepText = parseStepText(stepText);
+  return {
     id: index,
-    body: stepText,
+    title: parsedStepText.title,
+    body: parsedStepText.body,
     completed: false
-}));
+  };
+});
+
+let lessonTitle = lessonStepArray[0];
 
 let initialState = {
+  lessonTitle,
   lessonSteps,
-  currentLessonStep: 0
+  currentLessonStepId: 0
 };
 
 const lesson = (state = initialState, action) => {
   switch(action.type) {
     case SWITCH_LESSON_STEP:
       return Object.assign({}, state, {
-        currentLessonStep: action.id
+        currentLessonStepId: action.id
       })
     case TOGGLE_COMPLETED:
     let newLessonSteps = state.lessonSteps.map(step => {
