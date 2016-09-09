@@ -11,7 +11,9 @@ const LessonStep = ({ lessonTitle, lessonSteps, currentLessonStepId }) => {
         lessonTitle={lessonTitle}
         lessonStepTitle={lessonStep.title}
       />
-      <DisplayMarkdown markdown={lessonStep.body} />
+      <div className="lesson-body">
+        <DisplayMarkdown markdown={lessonStep.body} />
+      </div>
     </div>
   );
 }

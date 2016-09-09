@@ -10,6 +10,7 @@ const LessonStepList = (props) => {
     let selected = step.id === props.currentLessonStepId;
     return (
       <LessonStepListItem
+        selected={selected}
         {...step}
         id={step.id}
         key={step.id}

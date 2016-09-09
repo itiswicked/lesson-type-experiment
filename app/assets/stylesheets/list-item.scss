@@ -1,5 +1,7 @@
 .step-list-item {
-  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   list-style: none;
   height: 25px;
   padding: 10px;
@@ -7,8 +9,18 @@
   .check-wrapper {
     display: inline-block;
   }
+
+  .complete-icon {
+    width: 16px;
+  }
+
+  .title {
+    display: inline;
+    margin-left: 5px;
+    font-size: 1.1rem;
+  }
 }
 
-.selected {
-  background-color: grey;
+.step-list-item:not(:last-child) {
+  border-bottom: 2px solid black;
 }

@@ -23,7 +23,7 @@ let lessonSteps = lessonStepArray.slice(1).map((stepText, index) => {
     id: index,
     title: parsedStepText.title,
     body: parsedStepText.body,
-    completed: false
+    completed: false,
   };
 });
 
@@ -40,7 +40,7 @@ const lesson = (state = initialState, action) => {
     case SWITCH_LESSON_STEP:
       return Object.assign({}, state, {
         currentLessonStepId: action.id
-      })
+      });
     case TOGGLE_COMPLETED:
     let newLessonSteps = state.lessonSteps.map(step => {
       if(step.id === action.id){

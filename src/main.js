@@ -7,7 +7,7 @@ import App from './components/App';
 import lesson from './reducers/lesson'
 
 let store = createStore(
-  lesson,
+    lesson,
   window.devToolsExtension && window.devToolsExtension()
 );
 
