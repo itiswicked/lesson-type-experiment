@@ -5,6 +5,7 @@ import LessonStepHeader from './../components/LessonStepHeader';
 
 const LessonStep = ({ lessonTitle, lessonSteps, currentLessonStepId }) => {
   let lessonStep = lessonSteps.filter(step => step.id === currentLessonStepId)[0];
+  // test
   return (
     <div className="lesson-step">
       <LessonStepHeader
